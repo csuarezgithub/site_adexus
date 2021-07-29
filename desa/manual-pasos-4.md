@@ -84,7 +84,7 @@ sudo mkdir wp-content
 then get the efs file system ID from parameter store
 
 ```
-EFSFSID=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/EFSFSID --query Parameters[0].Value)
+EFSFSID=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/EFSFSID --query Parameters[0].Value)
 EFSFSID=`echo $EFSFSID | sed -e 's/^"//' -e 's/"$//'`
 ```
 

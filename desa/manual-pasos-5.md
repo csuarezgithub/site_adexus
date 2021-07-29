@@ -53,7 +53,7 @@ Scroll down and copy the `DNS Name` into your clipboard
 Move to the systems manager console https://console.aws.amazon.com/systems-manager/home?region=us-east-1#  
 Click `Parameter Store`  
 Click `Create Parameter`  
-Under `Name` enter `/A4L/Wordpress/ALBDNSNAME` 
+Under `Name` enter `/ADX/WP-DESA/ALBDNSNAME` 
 Under `Description` enter `DNS Name of the Application Load Balancer for wordpress`  
 for `Tier` set `Standard`  
 For `Type` set `String`  
@@ -66,7 +66,7 @@ Click `Create Parameter`
 Go to the EC2 console https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Home:  
 CLick `Launch Templates`  
 Check the box next to the `Wordpress` launch template, click `Actions` and click `Modify Template (Create New Version)`  
-for `Template version description` enter `App only, uses EFS filesystem defined in /A4L/Wordpress/EFSFSID, ALB home added to WP Database`  
+for `Template version description` enter `App only, uses EFS filesystem defined in /ADX/WP-DESA/EFSFSID, ALB home added to WP Database`  
 Scroll to the bottom and expand `Advanced Details`  
 Scroll to the bottom and find `User Data` expand the entry box as much as possible.  
 
@@ -74,7 +74,7 @@ After `#!/bin/bash -xe` position cursor at the end & press enter twice to add ne
 paste in this
 
 ```
-ALBDNSNAME=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/ALBDNSNAME --query Parameters[0].Value)
+ALBDNSNAME=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/ALBDNSNAME --query Parameters[0].Value)
 ALBDNSNAME=`echo $ALBDNSNAME | sed -e 's/^"//' -e 's/"$//'`
 
 ```

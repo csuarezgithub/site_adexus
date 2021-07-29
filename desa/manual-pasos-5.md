@@ -121,7 +121,7 @@ Under `Launch Template` select `Wordpress`
 Under `Version` select `Latest`  
 Scroll down and click `Next`  
 for `Instance Purchase' options, leave the default of `Adhere to launch template` selected.  
-For `Network` `VPC` select `A4LVPC`  
+For `Network` `VPC` select `adx-vpc1`  
 For `Subnets` select `sn-Pub-A`, `sn-pub-B` and `sn-pub-C`  
 Click `next`  
 

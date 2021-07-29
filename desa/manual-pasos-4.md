@@ -26,9 +26,9 @@ In this part you will be configuing the EFS `Mount Targets` which are the networ
 In the `Virtual Private Cloud (VPC)` dropdown select `A4LVPC`  
 You should see 3 rows.  
 Make sure `us-east-1a`, `us-east-1b` & `us-east-1c` are selected in each row.  
-In `us-east-1a` row, select `sn-App-A` in the subnet ID dropdown, and in the security groups dropdown select `A4LVPC-SGEFS` & remove the default security group  
-In `us-east-1b` row, select `sn-App-B` in the subnet ID dropdown, and in the security groups dropdown select `A4LVPC-SGEFS` & remove the default security group  
-In `us-east-1c` row, select `sn-App-C` in the subnet ID dropdown, and in the security groups dropdown select `A4LVPC-SGEFS` & remove the default security group  
+In `us-east-1a` row, select `sn-App-A` in the subnet ID dropdown, and in the security groups dropdown select `ADXVPC-SGEFS` & remove the default security group  
+In `us-east-1b` row, select `sn-App-B` in the subnet ID dropdown, and in the security groups dropdown select `ADXVPC-SGEFS` & remove the default security group  
+In `us-east-1c` row, select `sn-App-C` in the subnet ID dropdown, and in the security groups dropdown select `ADXVPC-SGEFS` & remove the default security group  
 
 Click `next`  
 Leave all these options as default and click `next`  

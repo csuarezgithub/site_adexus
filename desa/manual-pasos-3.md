@@ -42,7 +42,7 @@ Under `Version` select `MySQL 5.6.46` (best aurora compatability for snapshot mi
 Scroll down and select `Free Tier` under templates
 _this ensures there will be no costs for the database but it will be single AZ only_
 
-under `Db instance identifier` enter `a4lWordPress`
+under `Db instance identifier` enter `adxWordPress`
 under `Master Username` enter enter the value from here https://console.aws.amazon.com/systems-manager/parameters/A4L/Wordpress/DBUser/description?region=us-east-1&tab=Table  
 under `Master Password` and `Confirm Password` enter the value from here https://console.aws.amazon.com/systems-manager/parameters/A4L/Wordpress/DBPassword/description?region=us-east-1&tab=Table  
 

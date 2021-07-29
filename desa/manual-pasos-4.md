@@ -48,7 +48,7 @@ Now that the file system has been created, you need to add another parameter sto
 Move to the Systems Manager console https://console.aws.amazon.com/systems-manager/home?region=us-east-1#  
 Click on `Parameter Store` on the left menu  
 Click `Create Parameter`  
-Under `Name` enter `/A4L/Wordpress/EFSFSID` 
+Under `Name` enter `/ADX/WP-DESA/EFSFSID` 
 Under `Description` enter `File System ID for Wordpress Content (wp-content)`  
 for `Tier` set `Standard`  
 For `Type` set `String`  

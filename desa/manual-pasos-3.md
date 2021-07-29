@@ -54,7 +54,7 @@ Make sure `Publicly accessible` is set to `No`
 Under `Existing VPC security groups` add `A4LVPC-SG-Database` and remove `Default`  
 Under `Availability Zone` set `us-east-1a`  
 Scroll down and expand `Additional configuration`  
-in the `Initial database name` box enter the value from here https://console.aws.amazon.com/systems-manager/parameters/A4L/Wordpress/DBName/description?region=us-east-1&tab=Table  
+in the `Initial database name` box enter the value from here https://console.aws.amazon.com/systems-manager/parameters/ADX/WP-DESA/DBName/description?region=us-east-1&tab=Table  
 Scroll to the bottom and click `create Database`  
 
 ** this will take anywhere up to 30 minutes to create ... it will need to be fully ready before you move to the next step - coffee time !!!! **

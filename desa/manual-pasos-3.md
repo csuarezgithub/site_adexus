@@ -74,19 +74,19 @@ You're going to do an export of the SQL database running on the local ec2 instan
 
 First run these commands to populate variables with the data from Parameter store, it avoids having to keep locating passwords  
 ```
-DBPassword=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/DBPassword --with-decryption --query Parameters[0].Value)
+DBPassword=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/DBPassword --with-decryption --query Parameters[0].Value)
 DBPassword=`echo $DBPassword | sed -e 's/^"//' -e 's/"$//'`
 
-DBRootPassword=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/DBRootPassword --with-decryption --query Parameters[0].Value)
+DBRootPassword=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/DBRootPassword --with-decryption --query Parameters[0].Value)
 DBRootPassword=`echo $DBRootPassword | sed -e 's/^"//' -e 's/"$//'`
 
-DBUser=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/DBUser --query Parameters[0].Value)
+DBUser=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/DBUser --query Parameters[0].Value)
 DBUser=`echo $DBUser | sed -e 's/^"//' -e 's/"$//'`
 
-DBName=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/DBName --query Parameters[0].Value)
+DBName=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/DBName --query Parameters[0].Value)
 DBName=`echo $DBName | sed -e 's/^"//' -e 's/"$//'`
 
-DBEndpoint=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/DBEndpoint --query Parameters[0].Value)
+DBEndpoint=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/DBEndpoint --query Parameters[0].Value)
 DBEndpoint=`echo $DBEndpoint | sed -e 's/^"//' -e 's/"$//'`
 
 ```
@@ -103,13 +103,13 @@ mysqldump -h $DBEndpoint -u $DBUser -p$DBPassword $DBName > a4lWordPress.sql
 ## Restore that Backup into RDS
 
 Move to the RDS Console https://console.aws.amazon.com/rds/home?region=us-east-1#databases:  
-Click the `a4lWordPressdb` instance  
+Click the `adxWordPress` instance  
 Copy the `endpoint` into your clipboard  
 Move to the Parameter store https://console.aws.amazon.com/systems-manager/parameters?region=us-east-1  
-Check the box next to `/A4L/Wordpress/DBEndpoint` and click `Delete`
+Check the box next to `/ADX/WP-DESA/DBEndpoint` and click `Delete`
 Click `Create Parameter`  
 
-Under `Name` enter `/A4L/Wordpress/DBEndpoint`  
+Under `Name` enter `/ADX/WP-DESA/DBEndpoint`  
 Under `Descripton` enter `WordPress Endpoint Name`  
 Under `Tier` select `Standard`    
 Under `Type` select `String`  
@@ -120,7 +120,7 @@ Click `Create Parameter`
 Update the DbEndpoint environment variable with 
 
 ```
-DBEndpoint=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/DBEndpoint --query Parameters[0].Value)
+DBEndpoint=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/DBEndpoint --query Parameters[0].Value)
 DBEndpoint=`echo $DBEndpoint | sed -e 's/^"//' -e 's/"$//'`
 ```
 

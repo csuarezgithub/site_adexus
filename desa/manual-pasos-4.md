@@ -119,7 +119,7 @@ Next you will update the launch template so that it automatically mounts the EFS
 Go to the EC2 console https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Home:  
 Click `Launch Templates`  
 Check the box next to the `Wordpress` launch template, click `Actions` and click `Modify Template (Create New Version)`  
-for `Template version description` enter `App only, uses EFS filesystem defined in /A4L/Wordpress/EFSFSID`  
+for `Template version description` enter `App only, uses EFS filesystem defined in /ADX/WP-DESA/EFSFSID`  
 Scroll to the bottom and expand `Advanced Details`  
 Scroll to the bottom and find `User Data` expand the entry box as much as possible.  
 
@@ -127,7 +127,7 @@ After `#!/bin/bash -xe` position cursor at the end & press enter twice to add ne
 paste in this
 
 ```
-EFSFSID=$(aws ssm get-parameters --region us-east-1 --names /A4L/Wordpress/EFSFSID --query Parameters[0].Value)
+EFSFSID=$(aws ssm get-parameters --region us-east-1 --names /ADX/WP-DESA/EFSFSID --query Parameters[0].Value)
 EFSFSID=`echo $EFSFSID | sed -e 's/^"//' -e 's/"$//'`
 
 ```

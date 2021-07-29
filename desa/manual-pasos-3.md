@@ -43,8 +43,8 @@ Scroll down and select `Free Tier` under templates
 _this ensures there will be no costs for the database but it will be single AZ only_
 
 under `Db instance identifier` enter `adxWordPress`
-under `Master Username` enter enter the value from here https://console.aws.amazon.com/systems-manager/parameters/A4L/Wordpress/DBUser/description?region=us-east-1&tab=Table  
-under `Master Password` and `Confirm Password` enter the value from here https://console.aws.amazon.com/systems-manager/parameters/A4L/Wordpress/DBPassword/description?region=us-east-1&tab=Table  
+under `Master Username` enter enter the value from here https://console.aws.amazon.com/systems-manager/parameters/ADX/WP-DESA/DBUser/description?region=us-east-1&tab=Table  
+under `Master Password` and `Confirm Password` enter the value from here https://console.aws.amazon.com/systems-manager/parameters/ADX/WP-DESA/DBPassword/description?region=us-east-1&tab=Table  
 
 Under `DB Instance size`, then `DB instance class`, then `Burstable classes (includes t classes)` make sure db.t2.micro is selected  
 Scroll down, under `Connectivity`, `Virtual private cloud (VPC)` select `A4LVPC`  

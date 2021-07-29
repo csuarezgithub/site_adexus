@@ -11,7 +11,7 @@ Welcome back, in stage 4 of this demo series yyou will be creating an EFS file s
 Move to the EFS Console https://console.aws.amazon.com/efs/home?region=us-east-1#/get-started  
 Click on `Create file System`  
 We're going to step through the full configuration options, so click on `Customize`  
-For `Name` type `A4L-WORDPRESS-CONTENT`  
+For `Name` type `ADX-WORDPRESS-CONTENT`  
 This is critical data so .. ensure `Enable Automatic Backups` is enabled.  
 for `LifeCycle management` leave as the default of `30 days since last access`  
 You have two `performance modes` to pick, choose `General Purpose` as MAX I/O is for very spefific high performance scenarios.  

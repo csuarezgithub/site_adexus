@@ -116,7 +116,7 @@ Move to the EC2 console
 under `Auto Scaling`  
 click `Auto Scaling Groups`  
 Click `Create an Auto Scaling Group`  
-For `Auto Scaling group name` enter `A4LWORDPRESSASG`  
+For `Auto Scaling group name` enter `ADXWORDPRESSASG`  
 Under `Launch Template` select `Wordpress`  
 Under `Version` select `Latest`  
 Scroll down and click `Next`  

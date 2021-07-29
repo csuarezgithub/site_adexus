@@ -131,7 +131,7 @@ Its here where we integrate the ASG with the Load Balancer. Load balancers actua
 
 Check the `Attach to an existing Load balancer` box  
 Ensure `Application Load Balancer or Network Load Balancer` is selected.  
-for `Choose a target group for your load balancer` select `A4LWORDPRESSALBTG`  
+for `Choose a target group for your load balancer` select `ADXWORDPRESSALBTG`  
 Under `health Checks - Optional` choose `ELB`  
 Scroll down and click `Next`  
 
